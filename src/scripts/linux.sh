@@ -3,7 +3,7 @@ self_hosted_helper() {
   if ! command -v apt-fast >/dev/null; then
     sudo ln -sf /usr/bin/apt-get /usr/bin/apt-fast
   fi
-  install_packages curl make software-properties-common unzip autoconf automake gcc g++
+  install_packages curl make software-properties-common unzip autoconf automake gcc g++ libargon2-0
   add_ppa
 }
 
