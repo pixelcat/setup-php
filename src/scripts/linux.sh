@@ -159,7 +159,7 @@ add_devtools() {
   fi
   sudo update-alternatives --set php-config /usr/bin/php-config"$version" >/dev/null 2>&1
   sudo update-alternatives --set phpize /usr/bin/phpize"$version" >/dev/null 2>&1
-  configure_pecl >/dev/null 2>&1
+  configure_pecl
   add_log "${tick:?}" "$tool" "Added $tool $semver"
 }
 

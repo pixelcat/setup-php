@@ -177,7 +177,7 @@ get_pecl_version() {
 # Function to install PECL extensions and accept default options
 pecl_install() {
   local extension=$1
-  configure_pecl >/dev/null 2>&1
+  configure_pecl
   yes '' 2>/dev/null | sudo pecl install -f "$extension" >/dev/null 2>&1
 }
 
