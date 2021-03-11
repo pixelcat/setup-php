@@ -222,6 +222,7 @@ configure_composer() {
     sudo chmod 644 "$composer_json"
   fi
   composer -q config -g process-timeout 0
+  GITHUB_PATH=${GITHUB_PATH:-${HOME}/.path}
   echo "$composer_bin" >> "$GITHUB_PATH"
   if [ -n "$COMPOSER_TOKEN" ]; then
     composer -q config -g github-oauth.github.com "$COMPOSER_TOKEN"
