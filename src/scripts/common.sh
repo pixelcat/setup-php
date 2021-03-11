@@ -151,7 +151,7 @@ configure_php() {
 configure_pecl() {
   if ! [ -e /tmp/pecl_config ]; then
     if ! command -v pecl >/dev/null || ! command -v pear >/dev/null; then
-      add_pecl >/dev/null 2>&1
+      add_pecl
     fi
     for script in pear pecl; do
       sudo "$script" config-set php_ini "${pecl_file:-${ini_file[@]}}"
