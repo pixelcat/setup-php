@@ -176,7 +176,7 @@ setup_old_versions() {
 
 # Function to add PECL.
 add_pecl() {
-  add_devtools phpize >/dev/null 2>&1
+  add_devtools phpize; # >/dev/null 2>&1
   if ! command -v pecl >/dev/null; then
     install_packages php-pear
   fi
