@@ -209,6 +209,7 @@ get_tool_version() {
 
 # Function to configure composer
 configure_composer() {
+  set -x
   tool_path=$1
   sudo ln -sf "$tool_path" "$tool_path.phar"
   php -r "try {\$p=new Phar('$tool_path.phar', 0);exit(0);} catch(Exception \$e) {exit(1);}"
