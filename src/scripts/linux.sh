@@ -152,6 +152,7 @@ add_pecl_extension() {
 
 # Function to setup phpize and php-config.
 add_devtools() {
+  set -x
   tool=$1
   if ! command -v "$tool$version" >/dev/null; then
     install_packages "php$version-dev" "php$version-xml"
