@@ -1,3 +1,5 @@
+set -xe
+
 # Function to setup environment for self-hosted runners.
 self_hosted_helper() {
   if ! command -v apt-fast >/dev/null; then

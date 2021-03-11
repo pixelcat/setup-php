@@ -1,4 +1,6 @@
 # Variables
+set -x
+
 export tick="✓"
 export cross="✗"
 export curl_opts=(-sL)
